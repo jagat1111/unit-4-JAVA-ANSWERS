@@ -373,3 +373,36 @@ public class Namer {
 }
 
 49.1.2
+import java.util.Scanner;
+
+public class EvenNumberChecker {
+    private int number;
+
+    public EvenNumberChecker(int number) {
+        this.number = number;
+    }
+
+    // Inner class to check if a number is even
+    class EvenCheck {
+        public boolean isEven() {
+            return number % 2 == 0;
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        int num = scanner.nextInt();
+        
+        EvenNumberChecker evenNumberChecker = new EvenNumberChecker(num);
+        EvenCheck evenCheck = evenNumberChecker.new EvenCheck();
+
+        if (evenCheck.isEven()) {
+            System.out.println("Even");
+        } else {
+            System.out.println("Odd");
+        }
+        
+        scanner.close();
+    }
+}
