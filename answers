@@ -150,4 +150,33 @@ public class StaticFieldDemo {
         System.out.println("A.aStaticField = " + A.aStaticField);
     }
 }
+48.1.2
+
+public class Counter {
+    private static int count = 1;
+
+    public static void increment() {
+        count++;
+    }
+
+    public static void decrement() {
+        count--;
+    }
+
+    public static void displayCount() {
+        System.out.println("Current value of count is: " + count);
+    }
+
+    public static void main(String[] args) {
+        // Test case 1
+        displayCount(); // Initial value of count is 0
+
+        increment();    // Increment count by 1
+        displayCount(); // Current value of count is 1
+
+
+        decrement();    // Decrement count by 1
+        displayCount(); // Current value of count is 1
+    }
+}
 
