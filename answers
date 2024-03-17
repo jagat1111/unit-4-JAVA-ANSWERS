@@ -732,3 +732,7 @@ abstract class Prefixer {
 
 Statements 1 and 2 will result in compilation errors.
 
+51.1.1
+Both default and static methods
+
+51.1.2
