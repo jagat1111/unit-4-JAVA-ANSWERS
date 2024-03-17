@@ -123,3 +123,31 @@ public class MultipleStaticBlocksDemo {
     }
 }
 
+48.1.1
+
+
+class A {
+    static int aStaticField; // static field
+    int instanceField; // instance field
+
+    // Constructor to initialize instance field
+    A(int instanceFieldValue) {
+        this.instanceField = instanceFieldValue;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        A a1 = new A(3);
+        A a2 = new A(4);
+
+        // Accessing static field using class name
+        A.aStaticField = 5;
+
+        // Printing the values of instanceField and aStaticField for each instance
+        System.out.println("a1 = A [instanceField = " + a1.instanceField + ", aStaticField = " + A.aStaticField + "]");
+        System.out.println("a2 = A [instanceField = " + a2.instanceField + ", aStaticField = " + A.aStaticField + "]");
+        System.out.println("A.aStaticField = " + A.aStaticField);
+    }
+}
+
