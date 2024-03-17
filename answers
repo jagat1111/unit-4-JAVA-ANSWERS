@@ -68,3 +68,16 @@ public class Main {
         manager.printPersonDetails();
     }
 }
+
+
+
+47.2.1
+
+In static init block 1
+In static init block 2
+In constructor
+In constructor
+
+
+47.2.2
+
