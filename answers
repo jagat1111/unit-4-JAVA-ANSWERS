@@ -1,4 +1,4 @@
-49.1.1
+47.1.1
 In non-static init block 1
 In non-static init block 2
 In constructor
@@ -8,4 +8,8 @@ In non-static init block 2
 In constructor
 value = 3
 
+47.1.2
+Before any constructor is called, every time an instance of the class is created.
+
+47.1.3
 
