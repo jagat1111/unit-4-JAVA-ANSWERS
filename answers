@@ -840,3 +840,41 @@ public class CalculatorExample {
         System.out.println("Addition: " + result);
     }
 }
+
+
+50.1.2
+
+import java.util.ArrayList;
+
+public class LambdaExpression {
+    public static void main(String[] args) {
+        // Creating an ArrayList
+        ArrayList<Integer> numbers = new ArrayList<>();
+        
+        // Adding elements to the ArrayList
+        numbers.add(120);
+        numbers.add(303);
+        numbers.add(308);
+        numbers.add(555);
+        
+        // Printing the original ArrayList
+        
+        for (Integer number : numbers) {
+            System.out.println(number);
+        }
+        
+        // Using lambda expression to print all odd elements
+        System.out.println("All odd elements displayed:");
+        boolean oddFound = false;
+        for (Integer number : numbers) {
+            if (number % 2 != 0) {
+                System.out.println(number);
+                oddFound = true;
+            }
+        }
+        if (!oddFound) {
+            System.out.println("Empty");
+        }
+    }
+}
+50.1.3
