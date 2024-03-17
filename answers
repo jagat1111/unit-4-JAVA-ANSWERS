@@ -1064,3 +1064,33 @@ public class CollectionsDemo {
 1st 
 
 57.2.2
+package com.example;
+
+import java.util.Date;
+
+public class DateExample {
+    public static void main(String[] args) {
+        // Create a new Date object representing the current time
+        Date currentDate = new Date();
+
+
+        // Get the current time in milliseconds
+        long currentTime = currentDate.getTime();
+
+        
+
+        // Sleep for 1 second
+        System.out.println("Sleeping for 1 second...");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("This thread resumed after 1 or more seconds");
+
+
+
+        
+       
+    }
+}
