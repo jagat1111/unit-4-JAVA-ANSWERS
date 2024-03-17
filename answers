@@ -1187,3 +1187,24 @@ public class CalendarAddition {
 
 57.2.7
 option 5
+
+57.2.8
+
+
+
+import java.time.*;
+import java.time.temporal.TemporalAdjusters;
+
+public class LocalDateDemo {
+    public static void main(String[] args) {
+        // Java's birthday was on 1995-05-23
+        LocalDate javaBirthday = LocalDate.of(1995, Month.MAY, 23);
+
+        // The cake was cut on next Sunday: 1995-05-28
+        LocalDate nextSunday = javaBirthday.with(TemporalAdjusters.next(DayOfWeek.SUNDAY));
+
+        System.out.println("Java's birthday was on " + javaBirthday + ", and the cake was cut on next Sunday: " + nextSunday + ".");
+    }
+}
+
+
