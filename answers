@@ -44,12 +44,12 @@ class PersonManager {
 
     {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter name: ");
+        System.out.print("Enter name:");
         String name = scanner.nextLine();
-        System.out.print("Enter age: ");
+        System.out.print("Enter age:");
         int age = scanner.nextInt();
         scanner.nextLine(); // consume newline
-        System.out.print("Enter address: ");
+        System.out.print("Enter address:");
         String address = scanner.nextLine();
 
         person = new Person(name, age, address);
