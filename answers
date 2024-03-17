@@ -1158,3 +1158,32 @@ public class SimpleDateFormatDemo {
 SimpleDateFormat sd = new SimpleDateFormat("MMM-dd-yyyy");
 
 57.2.6
+package q11590;
+
+import java.util.*;
+import java.text.SimpleDateFormat;
+import java.text.ParseException;
+
+public class CalendarAddition {
+
+    public String addDays(String dateString, int days) throws ParseException {
+        // Use the correct format string as argument for the constructor
+        SimpleDateFormat sd = new SimpleDateFormat("MMM-dd-yyyy");
+        
+        // Parses text from the beginning of the given string to produce a date
+        Date date = sd.parse(dateString);
+        
+        Calendar cal = Calendar.getInstance();
+        // Configuring the cal object to the value of date
+        cal.setTime(date);
+        
+        // Supply the correct arguments to the add method below
+        cal.add(Calendar.DAY_OF_MONTH, days);
+        
+        // Format method on SimpleDateFormat returns a string representation of the passed date
+        return sd.format(cal.getTime());
+    }
+}
+
+57.2.7
+option 5
