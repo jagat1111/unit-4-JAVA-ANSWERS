@@ -152,7 +152,7 @@ public class StaticFieldDemo {
 }
 48.1.2
 
-public class Counter {
+public class CounterTest {
     private static int count = 1;
 
     public static void increment() {
