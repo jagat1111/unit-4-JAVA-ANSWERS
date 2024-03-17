@@ -312,3 +312,40 @@ public class StaticClassDemo {
         }
     }
 }
+
+
+48.3.2
+
+import java.util.Scanner;
+
+public class MathMain {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        
+        int a = scanner.nextInt();
+
+        
+        int b = scanner.nextInt();
+
+        scanner.close();
+
+        System.out.println("Addition: " + MathUtils.add(a, b));
+        System.out.println("Subtraction: " + MathUtils.subtract(a, b));
+        System.out.println("Multiplication: " + MathUtils.multiply(a, b));
+    }
+
+    static class MathUtils {
+        public static int add(int a, int b) {
+            return a + b;
+        }
+
+        public static int subtract(int a, int b) {
+            return a - b;
+        }
+
+        public static int multiply(int a, int b) {
+            return a * b;
+        }
+    }
+}
