@@ -611,3 +611,47 @@ public class AreaMain {
         }
     }
 }
+
+
+
+50.1.3
+
+import java.util.Scanner;
+import java.math.BigInteger;
+
+public class FactorialCalculator {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        int inputNumber = scanner.nextInt();
+
+        // Method that defines the local class and calculates the factorial
+        calculateAndPrintFactorial(inputNumber);
+
+        scanner.close();
+    }
+
+    private static void calculateAndPrintFactorial(int number) {
+        // Local class inside the method
+        class Factorial {
+            private int number;
+
+            public Factorial(int number) {
+                this.number = number;
+            }
+
+            public BigInteger calculateFactorial() {
+                BigInteger factorial = BigInteger.ONE;
+                for (int i = 1; i <= number; i++) {
+                    factorial = factorial.multiply(BigInteger.valueOf(i));
+                }
+                return factorial;
+            }
+        }
+
+        // Creating an instance of the local class and using it to calculate the factorial
+        Factorial factorial = new Factorial(number);
+        System.out.println(factorial.calculateFactorial());
+    }
+}
