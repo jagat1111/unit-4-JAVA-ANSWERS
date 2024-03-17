@@ -1,0 +1,11 @@
+49.1.1
+In non-static init block 1
+In non-static init block 2
+In constructor
+value = 3
+In non-static init block 1
+In non-static init block 2
+In constructor
+value = 3
+
+
