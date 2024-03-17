@@ -989,5 +989,28 @@ all are correct
 56.2.1
 4th
 
+56.3.1
+public class TimingExample {
+    public static void main(String[] args) {
+        // Start the time measurement
+        long startTime = System.currentTimeMillis();
+
+        // Calculate the sum of numbers from 0 to 999
+        int sum = 0;
+        for (int i = 0; i < 1000; i++) {
+            sum += i;
+        }
+
+        // End the time measurement
+        long endTime = System.currentTimeMillis();
+
+        // Calculate the time taken in milliseconds
+        long timeTaken = endTime - startTime;
+
+        // Print the results
+        
+        System.out.println("Time taken in milliseconds = " + timeTaken);
+    }
+}
 
 
