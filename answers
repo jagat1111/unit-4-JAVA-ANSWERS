@@ -1122,3 +1122,31 @@ public class DateFormatInJapan {
         System.out.println("Oct 2, 1869 in Japan is: " + formattedDate);
     }
 }
+57.2.4
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class SimpleDateFormatDemo {
+    public static void main(String[] args) {
+        // Define the date text
+        String dateText = "15-08-1947";
+        
+        // Define the pattern for parsing
+        String pattern = "dd-MM-yyyy";
+        
+        // Create a SimpleDateFormat object with the pattern
+        SimpleDateFormat sdf = new SimpleDateFormat(pattern);
+        
+        try {
+            // Parse the date text to a Date object
+            Date parsedDate = sdf.parse(dateText);
+            
+            // Print the parsed date
+            System.out.println("parsedDate : " + parsedDate);
+        } catch (ParseException e) {
+            System.out.println("Error occurred while parsing the date: " + e.getMessage());
+        }
+    }
+}
