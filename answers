@@ -349,3 +349,27 @@ public class MathMain {
         }
     }
 }
+
+
+49.1.1
+public class Namer {
+    private String name;
+
+    public Namer(String name) {
+        this.name = name;
+    }
+
+    class Prefixer {
+        public String getCompleteName(String prefix) {
+            return prefix + " " + Namer.this.name;
+        }
+    }
+
+    public static void main(String[] args) {
+        Namer nameObj = new Namer("Doodle");
+        Namer.Prefixer prefixer = nameObj.new Prefixer();
+        System.out.println(prefixer.getCompleteName("Mr."));
+    }
+}
+
+49.1.2
