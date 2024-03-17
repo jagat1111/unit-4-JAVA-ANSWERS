@@ -26,6 +26,7 @@ class Person {
         this.address = address;
     }
 
+
     public String getName() {
         return name;
     }
@@ -245,3 +246,11 @@ public class StaticMethodDemo {
         System.out.println("A.getInstanceCount() = " + A.getInstanceCount());
     }
 }
+48.2.2
+
+//write the code
+    public static int add(int x, int y) {
+        return x + y;
+    }
+
+   
