@@ -878,3 +878,32 @@ public class LambdaExpression {
     }
 }
 50.1.3
+
+import java.util.Scanner;
+
+@FunctionalInterface
+interface StringTransformer {
+    String transform(String str);
+}
+
+public class StringMain {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Implementation using lambda expression to convert string to uppercase
+        StringTransformer uppercaseTransformer = str -> str.toUpperCase();
+
+        // Take input from the user
+        
+        String input = scanner.nextLine();
+
+        // Transform the input string to uppercase
+        String transformed = uppercaseTransformer.transform(input);
+
+        // Output the transformed string
+        System.out.println("Transformed string:");
+        System.out.println(transformed);
+
+        scanner.close();
+    }
+}
