@@ -925,4 +925,49 @@ option 1 is correct
 4th option
 
 54.1.2
+import java.util.Scanner;
 
+public final class ImmutablePoint {
+    private final double x;
+    private final double y;
+
+    public ImmutablePoint(double x, double y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public double getX() {
+        return x;
+    }
+
+    public double getY() {
+        return y;
+    }
+
+    public double calculateDistance(ImmutablePoint other) {
+        return Math.sqrt(Math.pow(other.x - this.x, 2) + Math.pow(other.y - this.y, 2));
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Taking input for the first point
+        System.out.print("x-coordinate for first point: ");
+        double x1 = scanner.nextDouble();
+        System.out.print("y-coordinate for first point: ");
+        double y1 = scanner.nextDouble();
+        ImmutablePoint firstPoint = new ImmutablePoint(x1, y1);
+
+        // Taking input for the second point
+        System.out.print("x-coordinate for second point: ");
+        double x2 = scanner.nextDouble();
+        System.out.print("y-coordinate for second point: ");
+        double y2 = scanner.nextDouble();
+        ImmutablePoint secondPoint = new ImmutablePoint(x2, y2);
+
+        // Calculating and printing the distance
+        System.out.println("Distance: " + firstPoint.calculateDistance(secondPoint));
+
+        scanner.close();
+    }
+}
