@@ -805,3 +805,38 @@ public class SquareNumber {
         scanner.close();
     }
 }
+
+
+52.1.1
+
+import java.util.Scanner;
+
+// Calculator interface
+interface Calculator {
+    int calculate(int a, int b);
+}
+
+public class CalculatorExample {
+    public static void main(String[] args) {
+        // Create Scanner object for user input
+        Scanner scanner = new Scanner(System.in);
+
+        // Lambda expression for addition operation
+        Calculator addition = (a, b) -> a + b;
+
+        // Take input from user
+       
+        int input1 = scanner.nextInt();
+        
+        int input2 = scanner.nextInt();
+
+        // Close the Scanner
+        scanner.close();
+
+        // Calculate the result using the lambda expression
+        int result = addition.calculate(input1, input2);
+
+        // Output
+        System.out.println("Addition: " + result);
+    }
+}
