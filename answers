@@ -279,3 +279,36 @@ public class StringUtils {
     }
 }
 
+48.3.1
+
+// Define the main class StaticClassDemo
+public class StaticClassDemo {
+    
+    // Define the main method
+    public static void main(String[] args) {
+        // Create instances of the nested static class A
+        A a1 = new A(3);
+        A a2 = new A(4);
+        
+        // Print string representation of a1 and a2
+        System.out.println("a1 = " + a1);
+        System.out.println("a2 = " + a2);
+    }
+    
+    // Define a static nested class A
+    static class A {
+        // Private integer variable value
+        private int value;
+        
+        // Constructor for class A
+        public A(int value) {
+            this.value = value;
+        }
+        
+        // Override toString method to return string representation
+        @Override
+        public String toString() {
+            return "A [value = " + value + "]";
+        }
+    }
+}
