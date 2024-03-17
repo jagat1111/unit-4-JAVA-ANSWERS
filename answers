@@ -736,3 +736,41 @@ Statements 1 and 2 will result in compilation errors.
 Both default and static methods
 
 51.1.2
+import java.util.Scanner;
+
+@FunctionalInterface
+interface CalculateOperation {
+    double calculate(double a, double b);
+}
+
+public class CalculateMain {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Get input from the user
+        System.out.print("First number: ");
+        double firstNumber = scanner.nextDouble();
+        System.out.print("Second number: ");
+        double secondNumber = scanner.nextDouble();
+
+        // Implement the functional interface using lambda expressions
+        CalculateOperation subtraction = (a, b) -> a - b;
+        CalculateOperation division = (a, b) -> {
+            if (b != 0) {
+                return a / b;
+            } else {
+                throw new ArithmeticException("Division by zero!");
+            }
+        };
+
+        // Use the lambda expressions
+        double subtractionResult = subtraction.calculate(firstNumber, secondNumber);
+        double divisionResult = division.calculate(firstNumber, secondNumber);
+
+        // Print the results
+        System.out.println("Subtraction Result: " + subtractionResult);
+        System.out.println("Division Result: " + divisionResult);
+
+        scanner.close();
+    }
+}
