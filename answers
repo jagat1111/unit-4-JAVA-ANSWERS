@@ -13,3 +13,58 @@ Before any constructor is called, every time an instance of the class is created
 
 47.1.3
 
+import java.util.Scanner;
+
+class Person {
+    private String name;
+    private int age;
+    private String address;
+
+    public Person(String name, int age, String address) {
+        this.name = name;
+        this.age = age;
+        this.address = address;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+}
+
+class PersonManager {
+    private Person person;
+
+    {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter name: ");
+        String name = scanner.nextLine();
+        System.out.print("Enter age: ");
+        int age = scanner.nextInt();
+        scanner.nextLine(); // consume newline
+        System.out.print("Enter address: ");
+        String address = scanner.nextLine();
+
+        person = new Person(name, age, address);
+    }
+
+    public void printPersonDetails() {
+        System.out.println("Name: " + person.getName());
+        System.out.println("Age: " + person.getAge());
+        System.out.println("Address: " + person.getAddress());
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        PersonManager manager = new PersonManager();
+        manager.printPersonDetails();
+    }
+}
