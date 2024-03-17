@@ -432,3 +432,42 @@ class A {
 
 49.2.2
 
+import java.util.Scanner;
+
+class MathUtils {
+    static class Geometry {
+        // Method to calculate the area of a circle
+        public static double circleArea(double radius) {
+            return Math.PI * radius * radius;
+        }
+        
+        // Method to calculate the area of a rectangle
+        public static double rectangleArea(double length, double width) {
+            return length * width;
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input for circle radius
+        double radius = scanner.nextDouble();
+
+        // Input for rectangle length
+        double length = scanner.nextDouble();
+
+        // Input for rectangle width
+        double width = scanner.nextDouble();
+
+        // Calculate area of circle
+        double circleArea = Geometry.circleArea(radius);
+        System.out.println("Area of circle: " + String.format("%.2f", circleArea));
+
+        // Calculate area of rectangle
+        double rectangleArea = Geometry.rectangleArea(length, width);
+        System.out.println("Area of rectangle: " + String.format("%.2f", rectangleArea));
+
+        scanner.close();
+    }
+}
+
