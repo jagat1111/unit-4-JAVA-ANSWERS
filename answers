@@ -213,21 +213,22 @@ public class Quiz {
 }
 
 
-48.2.3
-
+48.2.1
 
 class A {
-    static int counter;
-    int instanceField;
+    private int instanceField;
+    private static int counter = 0; // Static field to keep track of instances
 
-    public A() {
-        counter++;
+    public A(int instanceField) {
+        this.instanceField = instanceField;
+        counter++; // Increment the counter for each instance created
     }
 
     public static int getInstanceCount() {
-        return counter;
+        return counter; // Static method to access the static field
     }
 
+    @Override
     public String toString() {
         return "A [instanceField = " + instanceField + ", counter = " + counter + "]";
     }
@@ -235,15 +236,12 @@ class A {
 
 public class StaticMethodDemo {
     public static void main(String[] args) {
-        A a1 = new A();
-        a1.instanceField = 3;
+        A a1 = new A(3);
+        A a2 = new A(4);
+
         System.out.println("a1 = " + a1);
-
-        A a2 = new A();
-        a2.instanceField = 4;
         System.out.println("a2 = " + a2);
-
+        // Accessing static method correctly using class name
         System.out.println("A.getInstanceCount() = " + A.getInstanceCount());
     }
 }
-
