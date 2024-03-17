@@ -688,4 +688,43 @@ class A {  //this is a normal top-level class
 
 50.2.2
 
+package anonymousexample;
+
+interface Printer {
+    void print(String message);
+}
+
+public class AnonymousExample {
+    public static void main(String[] args) {
+        // Example of anonymous class implementing an interface
+        Printer printer = new Printer() {
+            @Override
+            public void print(String message) {
+                System.out.println(message);
+            }
+        };
+        
+        printer.print("printMe is called!");
+        
+        // Example of anonymous class extending a class
+        Prefixer prefixer = new Prefixer("Hello ") {
+            @Override
+            public String getPrefixedName(String name) {
+                return prefix+prefix + name;
+            }
+        };
+        
+        System.out.println(prefixer.getPrefixedName("James"));
+    }
+}
+
+abstract class Prefixer {
+    protected String prefix;
+
+    public Prefixer(String prefix) {
+        this.prefix = prefix;
+    }
+
+    public abstract String getPrefixedName(String name);
+}
 
