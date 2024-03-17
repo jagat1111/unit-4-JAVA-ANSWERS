@@ -527,3 +527,46 @@ public class ArrayMain {
         scanner.close();
     }
 }
+
+
+50.1.1
+
+class A {
+    private int value = 5; // Instance member of the enclosing class A
+
+    class B { // Inner class
+        B() {
+            System.out.println("In inner class B's constructor");
+        }
+    }
+
+    static class C { // Static nested class
+        C() {
+            System.out.println("In static nested class C's constructor");
+        }
+    }
+
+    public void someMethodInClassA() {
+        final int localVar = 2; // Local variable, final so it can be accessed by the local class
+
+        class D { // Local class
+            D() {
+                System.out.println("In local class D's constructor");
+                // Accessing the instance member of the enclosing class A
+                System.out.println("value = " + (value + localVar)); // localVar is accessible because it's final
+            }
+        }
+
+        D localClassInstance = new D(); // Instantiating the local class D
+    }
+
+    public static void main(String[] args) {
+        A outerClassInstance = new A(); // Creating an instance of the top-level class A
+        B innerClassInstance = outerClassInstance.new B(); // Creating an instance of the inner class B
+        C staticNestedClassInstance = new A.C(); // Creating an instance of the static nested class C
+        outerClassInstance.someMethodInClassA(); // Calling the method that creates an instance of the local class D
+    }
+}
+
+
+50.1.2
