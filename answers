@@ -907,3 +907,11 @@ public class StringMain {
         scanner.close();
     }
 }
+
+
+53.1.1
+
+
+value4 declared in statement 4 is called a constant.
+
+53.1.2
