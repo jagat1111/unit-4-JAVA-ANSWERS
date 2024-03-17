@@ -655,3 +655,37 @@ public class FactorialCalculator {
         System.out.println(factorial.calculateFactorial());
     }
 }
+
+
+50.2.1
+
+
+
+interface Printer { //this is a top-level interface
+    public void printMe();
+}
+
+class A {  //this is a normal top-level class
+    public static void main(String[] args) {
+        class PrinterImpl implements Printer { // an example of a normal local class
+            public void printMe() {
+                System.out.println("I am in printMe method of the local class PrinterImpl instance");
+            }
+        }
+
+        Printer myPrinter1 = new PrinterImpl();
+
+        Printer myPrinter2 = new Printer() { // an example of an anonymous class 
+            public void printMe() {
+                System.out.println("I am in printMe method of the anonymous class");
+            }
+        };
+
+        myPrinter1.printMe();
+        myPrinter2.printMe();
+    }
+}
+
+50.2.2
+
+
