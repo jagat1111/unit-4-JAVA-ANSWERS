@@ -253,4 +253,29 @@ public class StaticMethodDemo {
         return x + y;
     }
 
-   
+48.2.3
+import java.util.Scanner;
+
+class A {
+    public static String concatenate(String str1, String str2) {
+        return str1 + str2;
+    }
+}
+
+public class StringUtils {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Enter the first string:");
+        String str1 = scanner.nextLine();
+        
+        System.out.println("Enter the second string:");
+        String str2 = scanner.nextLine();
+        
+        String result = A.concatenate(str1, str2);
+        System.out.println("Concatenated string: " + result);
+        
+        scanner.close();
+    }
+}
+
