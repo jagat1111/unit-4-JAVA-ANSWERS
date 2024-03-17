@@ -774,3 +774,34 @@ public class CalculateMain {
         scanner.close();
     }
 }
+51.1.3
+
+import java.util.Scanner;
+
+// Functional interface with a single abstract method
+interface IntOperation {
+    int operate(int x);
+}
+
+public class SquareNumber {
+    public static void main(String[] args) {
+        // Creating a Scanner object to take input from the user
+        Scanner scanner = new Scanner(System.in);
+
+        // Taking user input for a number
+      
+        int number = scanner.nextInt();
+
+        // Creating a lambda expression to square the input number
+        IntOperation square = (x) -> x * x;
+
+        // Applying the lambda expression to square the input number
+        int squaredNumber = square.operate(number);
+
+        // Printing the squared number to the console
+        System.out.println(squaredNumber);
+
+        // Closing the Scanner object
+        scanner.close();
+    }
+}
