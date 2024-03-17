@@ -471,3 +471,59 @@ class MathUtils {
     }
 }
 
+49.2.3
+import java.util.Scanner;
+
+public class ArrayMain {
+
+    // Static nested class ArrayUtils
+    static class ArrayUtils {
+        
+        // Method to find the maximum element in an array
+        public static int findMax(int[] arr) {
+            int max = arr[0];
+            for (int i = 1; i < arr.length; i++) {
+                if (arr[i] > max) {
+                    max = arr[i];
+                }
+            }
+            return max;
+        }
+
+        // Method to find the minimum element in an array
+        public static int findMin(int[] arr) {
+            int min = arr[0];
+            for (int i = 1; i < arr.length; i++) {
+                if (arr[i] < min) {
+                    min = arr[i];
+                }
+            }
+            return min;
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read the size of the array from the user
+        System.out.print("Size: ");
+        int size = scanner.nextInt();
+
+        // Initialize the array with the given size
+        int[] array = new int[size];
+
+        // Read the elements of the array from the user
+        System.out.println("Elements of the array:");
+        for (int i = 0; i < size; i++) {
+            System.out.print("Element " + (i + 1) + ": ");
+            array[i] = scanner.nextInt();
+        }
+
+        // Call the methods from the ArrayUtils class and display the results
+        System.out.println("Maximum element: " + ArrayUtils.findMax(array));
+        System.out.println("Minimum element: " + ArrayUtils.findMin(array));
+
+        // Close the scanner
+        scanner.close();
+    }
+}
