@@ -233,7 +233,7 @@ class A {
     }
 }
 
-public class Main {
+public class StaticMethodDemo {
     public static void main(String[] args) {
         A a1 = new A();
         a1.instanceField = 3;
