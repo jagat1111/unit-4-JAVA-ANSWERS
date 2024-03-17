@@ -211,3 +211,39 @@ public class Quiz {
         scanner.close();
     }
 }
+
+
+48.2.3
+
+
+class A {
+    static int counter;
+    int instanceField;
+
+    public A() {
+        counter++;
+    }
+
+    public static int getInstanceCount() {
+        return counter;
+    }
+
+    public String toString() {
+        return "A [instanceField = " + instanceField + ", counter = " + counter + "]";
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        A a1 = new A();
+        a1.instanceField = 3;
+        System.out.println("a1 = " + a1);
+
+        A a2 = new A();
+        a2.instanceField = 4;
+        System.out.println("a2 = " + a2);
+
+        System.out.println("A.getInstanceCount() = " + A.getInstanceCount());
+    }
+}
+
