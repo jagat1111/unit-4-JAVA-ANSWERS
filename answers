@@ -100,4 +100,26 @@ public class StaticInitializationExample {
     }
 }
 
+47.2.3
+
+import java.util.Scanner;
+
+public class MultipleStaticBlocksDemo {
+    static int a;
+
+    static {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("value for a: ");
+        a = scanner.nextInt();
+        System.out.println("First static block executed");
+    }
+
+    static {
+        System.out.println("Second static block executed");
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Static block initialized with a = " + a);
+    }
+}
 
