@@ -406,3 +406,29 @@ public class EvenNumberChecker {
         scanner.close();
     }
 }
+
+
+49.2.1
+
+class A {
+    class B {
+        B() {
+            System.out.println("In inner class B's constructor");
+        }
+    }
+
+    static class C {
+        C() {
+            System.out.println("In static nested class C's constructor");
+        }
+    }
+
+    public static void main(String[] args) {
+        A outer = new A();
+        A.B inner = outer.new B();
+        A.C nested = new A.C();
+    }
+}
+
+49.2.2
+
