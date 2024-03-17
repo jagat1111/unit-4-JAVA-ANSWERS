@@ -570,3 +570,44 @@ class A {
 
 
 50.1.2
+
+
+import java.util.Scanner;
+
+public class AreaMain {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user for the length
+        System.out.print("Length: ");
+        double length = scanner.nextDouble();
+
+        // Prompt the user for the width
+        System.out.print("Width: ");
+        double width = scanner.nextDouble();
+
+        // Create an instance of the local class Rectangle
+        Rectangle rectangle = new Rectangle(length, width);
+
+        // Calculate and print the area
+        double area = rectangle.calculateArea();
+        System.out.println("Area: " + area);
+    }
+
+    // Local class Rectangle
+    private static class Rectangle {
+        private double length;
+        private double width;
+
+        // Constructor
+        public Rectangle(double length, double width) {
+            this.length = length;
+            this.width = width;
+        }
+
+        // Calculate the area
+        public double calculateArea() {
+            return length * width;
+        }
+    }
+}
