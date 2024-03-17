@@ -1094,3 +1094,31 @@ public class DateExample {
        
     }
 }
+
+
+57.2.3
+
+import java.util.*;
+import java.text.*;
+
+public class DateFormatInJapan {
+    public static String getJapaneseShortDate(Date date) {
+        Locale japanLocale = Locale.JAPAN;
+        DateFormat df = DateFormat.getDateInstance(DateFormat.SHORT, japanLocale);
+        return df.format(date);
+    }
+
+    public static void main(String[] args) {
+        // Sample Test Case
+        int year = Integer.parseInt(args[0]);
+        int month = Integer.parseInt(args[1]) - 1; // Month in Calendar starts from 0
+        int day = Integer.parseInt(args[2]);
+
+        Calendar cal = Calendar.getInstance();
+        cal.set(year, month, day);
+        Date date = cal.getTime();
+
+        String formattedDate = getJapaneseShortDate(date);
+        System.out.println("Oct 2, 1869 in Japan is: " + formattedDate);
+    }
+}
