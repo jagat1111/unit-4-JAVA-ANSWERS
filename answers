@@ -80,4 +80,24 @@ In constructor
 
 
 47.2.2
+import java.util.Scanner;
+
+public class StaticInitializationExample {
+    // Static variable declaration
+    static int x;
+
+    // Static initialization block
+    static {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("value of x: ");
+        x = scanner.nextInt();
+        System.out.println("Static block initialized with x = " + x);
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Inside main method");
+        System.out.println("Value of x: " + x);
+    }
+}
+
 
