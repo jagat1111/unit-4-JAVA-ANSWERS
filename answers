@@ -901,7 +901,7 @@ public class StringMain {
         String transformed = uppercaseTransformer.transform(input);
 
         // Output the transformed string
-        System.out.println("Transformed string:");
+        
         System.out.println(transformed);
 
         scanner.close();
