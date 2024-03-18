@@ -1078,7 +1078,7 @@ public class DateFormatInJapan {
         System.out.println("Oct 2, 1869 in Japan is: " + formattedDate);
     }
 }
-57.2.4
+57.1.4
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -1110,11 +1110,11 @@ public class SimpleDateFormatDemo {
 
 
 
-57.2.5
+57.1.5
 //make changes in line no 8
 SimpleDateFormat sd = new SimpleDateFormat("MMM-dd-yyyy");
 
-57.2.6
+57.1.6
 package q11590;
 
 import java.util.*;
@@ -1142,7 +1142,7 @@ public class CalendarAddition {
     }
 }
 
-57.2.7
+57.1.7
 option 5
 
 57.2.8
