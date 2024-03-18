@@ -1014,24 +1014,7 @@ public class TimingExample {
 }
 
 57.1.1
-
-import java.util.Arrays;
-
-public class ArraysDemo {
-    public static void main(String... args) {
-        // Initializing two arrays for demonstration
-        int[] array1 = {34, 4, 382, 223, 331};
-        int[] array2 = {4, 34, 223, 331, 382};
-
-        // Sorting the first array
-        Arrays.sort(array1);
-        System.out.println(Arrays.toString(array1));
-
-        // Checking if the sorted first array is equal to the second array
-        boolean isEqual = Arrays.equals(array1, array2);
-        System.out.println(isEqual);
-    }
-}
+1st option
 
 57.1.2
 
