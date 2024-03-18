@@ -63,7 +63,7 @@ class PersonManager {
     }
 }
 
-public class Main {
+public class PersonMain {
     public static void main(String[] args) {
         PersonManager manager = new PersonManager();
         manager.printPersonDetails();
