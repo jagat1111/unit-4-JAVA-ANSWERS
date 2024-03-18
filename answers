@@ -688,7 +688,7 @@ class A {  //this is a normal top-level class
 
 50.2.2
 
-package anonymousexample;
+
 
 interface Printer {
     void print(String message);
